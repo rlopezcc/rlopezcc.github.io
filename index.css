@@ -1,0 +1,82 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #223;
+  color: #ccc;
+}
+* {
+  font-family: arial;
+  box-sizing: border-box;
+}
+main {
+  text-align: center;
+}
+#title {
+  padding-top: 190px;
+}
+.name {
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+.name text {
+  fill: #223;
+  font-weight: bold;
+  font-size: 40px;
+  stroke: rgba(255, 255, 255, .7);
+}
+.name text:first-child {
+  font-size: 100px;
+}
+@keyframes rain {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(150px, 150px);
+  }
+}
+.drop {
+  animation: rain 2s 6s infinite ease-in;
+}
+
+#contact {
+  padding-top: 40px;
+  width: 350px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  #contact {
+    width: 100%;
+  }
+}
+#contact > a {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(25% - (10px * 3));
+  margin-right: 10px;
+  height: 100px;
+  content: ' ';
+  display: inline-block;
+  opacity: .7;
+  transition: opacity .4s;
+}
+
+#contact > a:hover {
+  opacity: .9;
+}
+
+#contact > a.github {
+  background-image: url('img/github.svg');
+}
+#contact > a.twitter {
+  background-image: url('img/twitter.svg');
+}
+#contact > a.linkedin {
+  background-image: url('img/linkedin.svg');
+}
+#contact > a.email {
+  background-image: url('img/email.svg');
+}
